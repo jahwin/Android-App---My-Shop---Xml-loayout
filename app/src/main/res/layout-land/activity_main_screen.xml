@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentA"
+        android:name="com.ampersand.myshop.modules.products.presentation.components.ProductListFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:layout_weight="1"
+        tools:layout="@layout/product_list_fragment" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ProductDetailsFragment"
+        android:name="com.ampersand.myshop.modules.products.presentation.components.ProductDetailsFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        tools:ignore="MissingConstraints"
+        tools:layout="@layout/product_details_fragment" />
+
+</LinearLayout>
