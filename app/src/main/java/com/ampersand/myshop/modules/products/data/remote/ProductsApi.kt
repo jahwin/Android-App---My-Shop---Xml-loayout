@@ -8,5 +8,5 @@ import retrofit2.http.GET
 interface ProductsApi {
 
     @GET(PRODUCT_LIST)
-    fun getProducts(): Call<List<ProductModel>>
+    suspend fun getProducts(): List<ProductModel>
 }

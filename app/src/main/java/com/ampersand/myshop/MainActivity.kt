@@ -11,6 +11,7 @@ import com.ampersand.myshop.modules.products.domain.model.MyCommunicator
 import com.ampersand.myshop.modules.products.domain.model.ProductModel
 import com.ampersand.myshop.modules.products.presentation.components.ProductDetailsFragment
 import com.ampersand.myshop.modules.products.presentation.screens.ProductDetailsActivity
+import com.ampersand.myshop.util.EventBus
 import com.google.gson.Gson
 
 
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity(), MyCommunicator {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_screen)
+
         val fragmentBView = findViewById<View>(R.id.ProductDetailsFragment)
         mIsDualPane = fragmentBView?.visibility == View.VISIBLE
     }
